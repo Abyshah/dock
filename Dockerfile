@@ -9,5 +9,3 @@ RUN apk add --no-cache \
 RUN mkdir /root/.aws
 COPY .aws /root/.aws
 RUN aws --version   # Just to make sure its installed alright
-ENTRYPOINT ["aws"] 
-CMD ["s3" , "ls"] 
