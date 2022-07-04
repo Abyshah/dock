@@ -7,5 +7,6 @@ RUN apk add --no-cache \
         awscli \
     && rm -rf /var/cache/apk/*
 RUN mkdir /root/.aws
-COPY .aws /root/.aws
 RUN aws --version   # Just to make sure its installed alright
+ENTRYPOINT ["aws"] 
+CMD ["s3" , "ls"] 
